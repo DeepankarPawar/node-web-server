@@ -2,7 +2,7 @@ var express=require('express');
 var hbs=require('hbs');
 var fs=require('fs');
 
-
+const port=env.process.PORT||3000;
 var exp=express();
 
 
@@ -67,7 +67,7 @@ exp.get('/about',(req,res)=>{
 });
 
 
-exp.listen(3000,()=>{
-	console.log('Welcome to 3000 port');
+exp.listen(port,()=>{
+	console.log('Welcome to '+port+' port');
 	
 });
